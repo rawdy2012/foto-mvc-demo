@@ -20,6 +20,7 @@ namespace InLineEditingDemo.Controllers
             return Json(empDB.ListAll(), JsonRequestBehavior.AllowGet);
         }
         public JsonResult Add(Employee emp)
+
         {
             return Json(empDB.Add(emp), JsonRequestBehavior.AllowGet);
         }
