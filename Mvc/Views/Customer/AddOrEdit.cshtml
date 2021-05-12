@@ -1,0 +1,86 @@
+﻿@model Mvc.Models.mvcCustomerModel
+@{
+    ViewBag.Title = "AddOrEdit";
+}
+
+<div class="form-body">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.ID)
+        <div class="form-group">
+            @Html.LabelFor(model => model.CUST_CODE)
+            @Html.EditorFor(model => model.CUST_CODE)
+            @Html.ValidationMessageFor(model => model.CUST_CODE)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CUST_NAME)
+            @Html.EditorFor(model => model.CUST_NAME)
+            @Html.ValidationMessageFor(model => model.CUST_NAME)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CUST_CITY)
+            @Html.EditorFor(model => model.CUST_CITY)
+            @Html.ValidationMessageFor(model => model.CUST_CITY)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.WORKING_AREA)
+            @Html.EditorFor(model => model.WORKING_AREA)
+            @Html.ValidationMessageFor(model => model.WORKING_AREA)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CUST_COUNTRY)
+            @Html.EditorFor(model => model.CUST_COUNTRY)
+            @Html.ValidationMessageFor(model => model.CUST_COUNTRY)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.GRADE)
+            @Html.EditorFor(model => model.GRADE)
+            @Html.ValidationMessageFor(model => model.GRADE)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OPENING_AMT)
+            @Html.EditorFor(model => model.OPENING_AMT)
+            @Html.ValidationMessageFor(model => model.OPENING_AMT)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.RECEIVE_AMT)
+            @Html.EditorFor(model => model.RECEIVE_AMT)
+            @Html.ValidationMessageFor(model => model.RECEIVE_AMT)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PAYMENT_AMT)
+            @Html.EditorFor(model => model.PAYMENT_AMT)
+            @Html.ValidationMessageFor(model => model.PAYMENT_AMT)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.OUTSTANDING_AMT)
+            @Html.EditorFor(model => model.OUTSTANDING_AMT)
+            @Html.ValidationMessageFor(model => model.OUTSTANDING_AMT)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PHONE_NO)
+            @Html.EditorFor(model => model.PHONE_NO)
+            @Html.ValidationMessageFor(model => model.PHONE_NO)
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit" class="btn button" />
+            <input type="reset" value="Reset" class="btn button" />
+        </div>
+
+
+    }
+</div>
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval");
+    }
