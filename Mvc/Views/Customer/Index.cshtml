@@ -6,100 +6,99 @@
 
 <br />
 
-
+<fieldset>
+    <legend>Customer Details</legend>
     <p>
         <a href="@Url.Action("AddOrEdit","Customer")" class="btn btn-default"><i class="fa fa-plus"></i>Create New</a>
     </p>
-    <fieldset>
-        <legend>Customer Details</legend>
-        <table class="table table-striped">
-            <thead class="table-heading">
-                <tr>
-                    @*<th>
+    <table class="table table-striped">
+        <thead class="table-heading">
+            <tr>
+                @*<th>
                         @Html.DisplayNameFor(model => model.CUST_CODE)
                     </th>*@
-                    <th>
-                        @Html.DisplayNameFor(model => model.CUST_NAME)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.CUST_CITY)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.WORKING_AREA)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.CUST_COUNTRY)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.GRADE)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.OPENING_AMT)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.RECEIVE_AMT)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.PAYMENT_AMT)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.OUTSTANDING_AMT)
-                    </th>
-                    <th>
-                        @Html.DisplayNameFor(model => model.PHONE_NO)
-                    </th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
+                <th>
+                    @Html.DisplayNameFor(model => model.CUST_NAME)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CUST_CITY)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.WORKING_AREA)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CUST_COUNTRY)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.GRADE)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OPENING_AMT)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.RECEIVE_AMT)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PAYMENT_AMT)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OUTSTANDING_AMT)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.PHONE_NO)
+                </th>
+                <th>Actions</th>
+            </tr>
+        </thead>
 
-            @foreach (var item in Model)
-            {
-                <tr>
-                    @*<td>
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td>
                         @Html.DisplayFor(modelItem => item.CUST_CODE)
                     </td>*@
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CUST_NAME)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CUST_CITY)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.WORKING_AREA)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.CUST_COUNTRY)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.GRADE)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.OPENING_AMT)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.RECEIVE_AMT)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PAYMENT_AMT)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.OUTSTANDING_AMT)
-                    </td>
-                    <td>
-                        @Html.DisplayFor(modelItem => item.PHONE_NO)
-                    </td>
-                    <td>
-                        <a href="@Url.Action("AddOrEdit","Customer",new { id=item.ID})" class="btn btn-default"><i class="fa fa-pencil"></i> Edit</a>
-                        <a onclick="Delete(@item.ID)" class="btn btn-default"><i class="fa fa-trash"></i> Delete</a>
-                        @*@Html.ActionLink("Edit", "Edit", new { id = item.ID })*@
-                        @*@Html.ActionLink("Details", "Details", new { id = item.ID }) |*@
-                        @*@Html.ActionLink("Delete", "Delete", new { id = item.ID })*@
-                    </td>
-                </tr>
-            }
+                <td>
+                    @Html.DisplayFor(modelItem => item.CUST_NAME)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CUST_CITY)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WORKING_AREA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CUST_COUNTRY)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GRADE)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OPENING_AMT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RECEIVE_AMT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PAYMENT_AMT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.OUTSTANDING_AMT)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PHONE_NO)
+                </td>
+                <td>
+                    <a href="@Url.Action("AddOrEdit","Customer",new { id=item.ID})" class="btn btn-default"><i class="fa fa-pencil"></i> Edit</a>
+                    <a onclick="Delete(@item.ID)" class="btn btn-default"><i class="fa fa-trash"></i> Delete</a>
+                    @*@Html.ActionLink("Edit", "Edit", new { id = item.ID })*@
+                    @*@Html.ActionLink("Details", "Details", new { id = item.ID }) |*@
+                    @*@Html.ActionLink("Delete", "Delete", new { id = item.ID })*@
+                </td>
+            </tr>
+        }
 
-        </table>
-    </fieldset>
+    </table>
+</fieldset>
 
 @section scripts{
     <script>
